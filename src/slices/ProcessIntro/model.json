@@ -1,0 +1,63 @@
+{
+  "id": "process_intro",
+  "type": "SharedSlice",
+  "name": "ProcessIntro",
+  "description": "ProcessIntro",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "processsteps": {
+          "type": "Group",
+          "config": {
+            "label": "ProcessSteps",
+            "repeat": true,
+            "fields": {
+              "step": {
+                "type": "Text",
+                "config": {
+                  "label": "Step",
+                  "placeholder": ""
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

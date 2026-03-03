@@ -1,0 +1,51 @@
+{
+  "format": "custom",
+  "id": "story",
+  "label": "Story",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "inputplaceholder": {
+        "type": "Text",
+        "config": {
+          "label": "InputPlaceholder",
+          "placeholder": ""
+        }
+      },
+      "button": {
+        "type": "Link",
+        "config": {
+          "label": "Button",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false,
+          "variants": ["ghost", "Primary", "Secondary", "outline"]
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "popular_post",
+  "type": "SharedSlice",
+  "name": "PopularPost",
+  "description": "PopularPost",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "label": {
+          "type": "Text",
+          "config": {
+            "label": "Label",
+            "placeholder": ""
+          }
+        },
+        "button": {
+          "type": "Link",
+          "config": {
+            "label": "Button",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false,
+            "variants": [
+              "Primary",
+              "Secondary",
+              "outline",
+              "ghost"
+            ]
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "cards",
+            "repeat": true,
+            "fields": {
+              "card": {
+                "type": "Link",
+                "config": {
+                  "label": "card",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    {
+                      "id": "blog",
+                      "fields": [
+                        "meta_title",
+                        "meta_description",
+                        "meta_image",
+                        "title",
+                        "description",
+                        "image"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

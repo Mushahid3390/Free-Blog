@@ -6,7 +6,7 @@ import Button from "../buttons/Button";
 
 const Navbar = ({ navbarContent }) => {
   const [active, setActive] = useState(false);
-  console.log("navbarContent: ", navbarContent.data.buttons);
+ 
   return (
     <div className="max-w-360 py-5.25 pl-46.5 pr-[103.5px] mx-auto">
       <div className="w-full px-20 flex justify-between items-center">
@@ -16,15 +16,14 @@ const Navbar = ({ navbarContent }) => {
         <div className=" flex gap-10 items-center">
           {navbarContent?.data?.menu && (
             <div className="flex gap-14.5 items-center">
-              {navbarContent?.data?.menu.map((item, idx) => {
+              {navbarContent?.data?.menu.map((item) => {
+                console.log("link: ", item.link)
                 return (
-                  <>
                     <PrismicNextLink
-                      key={item.id}
+                      key={item.link.key}
                       field={item.link}
                       className="text-[16px] leading-[150%] font-medium hover:text-[#7C4EE4] cursor-pointer"
                     />
-                  </>
                 );
               })}
             </div>
@@ -41,9 +40,7 @@ const Navbar = ({ navbarContent }) => {
           {navbarContent?.data?.buttons &&
             navbarContent?.data?.buttons.map((btn,key) => {
               return (
-                <>
-                 <Button key={key} label={btn.link.text} varient={btn.varient}/>
-                </>
+                 <Button key={btn.link.key} label={btn.link.text} varient={btn.link.varient}/>
               );
             })}
         </div>

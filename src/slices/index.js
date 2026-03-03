@@ -3,6 +3,10 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  about_hero_section: dynamic(() => import("./AboutHeroSection")),
   featured_section: dynamic(() => import("./FeaturedSection")),
   hero_section: dynamic(() => import("./HeroSection")),
+  popular_post: dynamic(() => import("./PopularPost")),
+  post: dynamic(() => import("./Post")),
+  process_intro: dynamic(() => import("./ProcessIntro")),
 };

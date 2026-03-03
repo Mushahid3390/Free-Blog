@@ -3,7 +3,7 @@ import Button from '../buttons/Button'
 import { PrismicNextImage } from '@prismicio/next'
 
 const Hero = ({slice}) => {
-    console.log("slice: ", slice.primary)
+   
   return (
     <div className={`max-w-360 w-full h-199 mx-auto px-28.5 pt-30.5 pb-24.5`}
         style={{backgroundImage: `url(${slice.primary.herobgimg.url})`}}
@@ -14,11 +14,9 @@ const Hero = ({slice}) => {
              <h2 className='font-bold text-[64px] mt-9.5 leading-21.5'>{slice.primary.title}</h2>
              <p className='font-normal max-w-104 text--16px mt-7 leading-[150%]'>{slice.primary.description}</p>
              {
-              slice.primary?.buttons?.map((btn,idx)=>{
+              slice.primary?.buttons?.map((btn)=>{
                 return (
-                  <>
-                    <Button label={btn.link.text} varient={btn.link.varient} style={"w-fit mt-16"} />
-                  </>
+                    <Button key={btn.link.key} label={btn.link.text} varient={btn.link.variant} style={"w-fit mt-16"} />
                 )
               })
              }

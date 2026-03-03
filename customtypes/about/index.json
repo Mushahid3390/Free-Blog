@@ -1,7 +1,7 @@
 {
   "format": "page",
-  "id": "landing_page",
-  "label": "Landing page",
+  "id": "about",
+  "label": "About",
   "repeatable": false,
   "status": true,
   "json": {
@@ -11,13 +11,10 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "popular_post": {
+            "process_intro": {
               "type": "SharedSlice"
             },
-            "featured_section": {
-              "type": "SharedSlice"
-            },
-            "hero_section": {
+            "about_hero_section": {
               "type": "SharedSlice"
             }
           }
