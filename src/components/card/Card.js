@@ -18,7 +18,12 @@ const Card = ({ card, variant = "secondary", style = "" }) => {
             {card.card.tags[0]}
           </p>
           <p className="font-medium text-[12px] leading-[150%] text-[#999999]">
-            {card.card.first_publication_date}
+            {new Date(card.card.first_publication_date).toLocaleDateString('en-US', {
+              day: "numeric",
+              weekday: "short",
+              month: "long",
+              Year: "numeric"
+            })}
           </p>
         </div>
         <h2 className="mt-7 font-bold text-[32px] leading-11.25 -tracking-[1px] max-w-116 max-h-32 overflow-hidden">
@@ -40,7 +45,12 @@ const Card = ({ card, variant = "secondary", style = "" }) => {
           {card.card.tags[0]}
         </p>
         <p className="font-medium text-[12px] leading-[150%] text-[#999999]">
-          {card.card.first_publication_date}
+          {new Date(card.card.first_publication_date).toLocaleDateString('en-US', {
+            day: "numeric",
+            weekday: "short",
+            month: "long",
+            Year: "numeric"
+          })}
         </p>
       </div>
 

@@ -17,7 +17,7 @@ const Blog = ({ slice }) => {
       <h1 className="font-bold text-[48px] leading-16 text-[#333333]">
         {slice.primary.title}
       </h1>
-      <PrismicNextImage field={slice.primary.image} />
+      <PrismicNextImage field={slice.primary.image} className="mx-auto inline-block"/>
       <div className="flex flex-col items-center gap-10 px-26">
         <PrismicRichText
           field={slice.primary.content}

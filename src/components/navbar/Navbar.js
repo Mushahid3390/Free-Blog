@@ -34,7 +34,7 @@ const Navbar = ({ navbarContent }) => {
              className={`px-2 py-2 shadow cursor-pointer rounded-full w-10 relative flex transition-[width] ease-in duration-500 ${active && "w-50"}`}
          >
            <HiMagnifyingGlass className="text-[23px] " />
-           <input type="text" placeholder="Search ..." className={`outline-none absolute left-9 -z-40 opacity-0 transition-opacity ease-in delay-150 duration-300 ${active&& "opacity-100 z-1"}`}/>
+           <input type="text" placeholder="Search ..." className={`outline-none absolute w-[75%] left-9 -z-40 opacity-0 transition-opacity ease-in delay-150 duration-300 ${active&& "opacity-100 z-1"} overflow-hidden`}/>
          </div>
 
           {navbarContent?.data?.buttons &&
